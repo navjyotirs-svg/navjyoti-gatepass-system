@@ -152,21 +152,7 @@ export default async function StatusPage({ params, searchParams }: StatusPagePro
           </div>
         )}
 
-        {isPending && token && (
-          <div className="mt-8 p-4 bg-surface-variant border border-outline rounded-xl break-all space-y-2">
-            <p className="text-sm font-bold text-primary flex items-center gap-2">
-              <span className="text-xl">🛠️</span> Developer / QA Tools
-            </p>
-            <p className="text-xs text-on-surface-variant">Use this secure link to test the approval flow directly:</p>
-            <a 
-              href={`/approve/${request.request_reference}?token=${token}`}
-              className="text-sm text-primary font-mono underline block"
-              target="_blank" rel="noreferrer"
-            >
-              /approve/{request.request_reference}?token={token}
-            </a>
-          </div>
-        )}
+
 
       </main>
 
