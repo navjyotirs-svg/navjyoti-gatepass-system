@@ -1,0 +1,51 @@
+
+> temp-app@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.3.1 (Turbopack)
+- Environments: .env.local
+Γ£ô Running next.config.ts took 118ms
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 32.2s
+  Running TypeScript ...
+  Finished TypeScript in 10.3s ...
+  Collecting page data using 15 workers ...
+[crypto] GATE_PASS_HMAC_SECRET not set ΓÇö falling back to service_role key. Set a dedicated secret for QR HMAC.
+[crypto] GATE_PASS_HMAC_SECRET not set ΓÇö falling back to service_role key. Set a dedicated secret for QR HMAC.
+[crypto] GATE_PASS_HMAC_SECRET not set ΓÇö falling back to service_role key. Set a dedicated secret for QR HMAC.
+  Generating static pages using 15 workers (0/16) ...
+  Generating static pages using 15 workers (4/16) 
+  Generating static pages using 15 workers (8/16) 
+[crypto] GATE_PASS_HMAC_SECRET not set ΓÇö falling back to service_role key. Set a dedicated secret for QR HMAC.
+  Generating static pages using 15 workers (12/16) 
+Γ£ô Generating static pages using 15 workers (16/16) in 1941ms
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ ╞Æ /admin
+Γö£ ╞Æ /admin/login
+Γö£ ╞Æ /admin/signup
+Γö£ ╞Æ /api/admin/export
+Γö£ ╞Æ /api/approve
+Γö£ ╞Æ /api/otp/send
+Γö£ ╞Æ /api/otp/verify
+Γö£ ╞Æ /api/whatsapp/[requestId]
+Γö£ ╞Æ /approve/[requestReference]
+Γö£ Γùï /employee/notifications
+Γö£ ╞Æ /gate
+Γö£ ╞Æ /verify/[passNumber]
+Γö£ Γùï /visit
+Γö£ ╞Æ /visit/pass/[requestReference]
+Γö£ Γùï /visit/photo
+Γö£ Γùï /visit/review
+Γöö ╞Æ /visit/status/[requestId]
+
+
+╞Æ Proxy (Middleware)
+
+Γùï  (Static)   prerendered as static content
+╞Æ  (Dynamic)  server-rendered on demand
+

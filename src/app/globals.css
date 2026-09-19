@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navjyoti-blue: #0033a0;
+  --color-navjyoti-blue-dark: #002277;
+  --color-navjyoti-orange: #f26522;
+  --color-navjyoti-red: #e31837;
+  
+  --color-primary: var(--color-navjyoti-blue);
+  --color-on-primary: #ffffff;
+  --color-secondary: var(--color-navjyoti-orange);
+  --color-on-secondary: #ffffff;
+  --color-surface: #f4f7fb; /* soft cool grey/blue background */
+  --color-on-surface: #0b1c30;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #e8f0fe;
+  --color-outline: #cbd5e1;
+  --color-outline-variant: #e2e8f0;
+  --color-on-surface-variant: #45474c;
+  --color-error: var(--color-navjyoti-red);
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 32px;
+  --spacing-touch-target-min: 48px;
+
+  --font-inter: 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: var(--color-surface);
+  --foreground: var(--color-on-surface);
+}
+
+@keyframes ambient-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
+html {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
 body {
-  background: var(--background);
+  background: linear-gradient(-45deg, #f8fafc, #e0e7ff, #fff7ed, #eff6ff);
+  background-size: 400% 400%;
+  animation: ambient-gradient 12s ease infinite;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  min-height: 100dvh;
+  min-height: 100svh;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+* {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Focus visibility for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-navjyoti-blue);
+  outline-offset: 2px;
+}
+
+/* Ensure fixed/sticky bottom bars respect safe area */
+.safe-pb {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+.safe-pt {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
 }
