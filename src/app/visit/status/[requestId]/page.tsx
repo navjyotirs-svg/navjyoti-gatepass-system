@@ -15,7 +15,6 @@ interface StatusPageProps {
 export default async function StatusPage({ params, searchParams }: StatusPageProps) {
   const { requestId } = await params;
   const resolvedSearchParams = await searchParams;
-  const token = typeof resolvedSearchParams.token === 'string' ? resolvedSearchParams.token : undefined;
 
   // 1. Fetch request details
   const { data: request, error } = await supabaseServer
